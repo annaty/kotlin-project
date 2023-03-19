@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Anna\'s App</string>
+    <string name="app_name">Epsi</string>
+    <string name="info">Info</string>
+    <string name="products">Produits</string>
 </resources>
