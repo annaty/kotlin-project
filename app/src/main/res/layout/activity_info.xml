@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InfoActivity">
+    <include
+        layout="@layout/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="220dp"
+        android:layout_height="240dp"
+        android:layout_gravity="center_horizontal"
+        android:adjustViewBounds="true"
+        android:src="@drawable/icon" />
+    <TextView
+        android:id="@+id/info"
+        style="@style/InfoText"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:text="Info etudiant"
+        />
+    <TextView
+        android:id="@+id/name"
+        style="@style/InfoText"
+        android:text="Tylkowska Anna"
+        />
+    <TextView
+        android:id="@+id/email"
+        style="@style/InfoText"
+        android:text="Email: anna.tylkowska@epsi.fr"
+        />
+    <TextView
+        android:id="@+id/group"
+        style="@style/InfoText"
+        android:text="Groupe: solo"
+        />
+    <TextView
+        android:id="@+id/link"
+        style="@style/LinkText"
+        android:text="http://www.epsi.fr/" />
+
+</LinearLayout>
