@@ -18,7 +18,7 @@ class Category (
 class CategoryActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_categories)
+        setContentView(R.layout.activity_category)
         val title = intent.extras?.getString("title")
         setHeaderTitle(title)
         showBack()

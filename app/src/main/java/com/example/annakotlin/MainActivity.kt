@@ -1,12 +1,9 @@
 package com.example.annakotlin
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
 
 class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,7 +21,7 @@ class MainActivity : BaseActivity() {
 
         val buttonProducts = findViewById<Button>(R.id.buttonProducts)
         buttonProducts.setOnClickListener(View.OnClickListener {
-            val newIntent = Intent(application, ProductsActivity::class.java)
+            val newIntent = Intent(application, CategoryActivity::class.java)
             newIntent.putExtra("title", getString(R.string.categories))
             startActivity(newIntent)
         })
