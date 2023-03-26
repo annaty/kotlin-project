@@ -19,7 +19,13 @@ class MainActivity : BaseActivity() {
         buttonInfo.setOnClickListener(View.OnClickListener {
             val newIntent = Intent(application, InfoActivity::class.java)
             newIntent.putExtra("title", getString(R.string.info))
+            startActivity(newIntent)
+        })
 
+        val buttonProducts = findViewById<Button>(R.id.buttonProducts)
+        buttonProducts.setOnClickListener(View.OnClickListener {
+            val newIntent = Intent(application, ProductsActivity::class.java)
+            newIntent.putExtra("title", getString(R.string.categories))
             startActivity(newIntent)
         })
     }

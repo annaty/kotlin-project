@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">Epsi</string>
+    <string name="app_name">Anna Epsi</string>
     <string name="info">Info</string>
     <string name="products">Produits</string>
+    <string name="categories">Rayons</string>
 </resources>
