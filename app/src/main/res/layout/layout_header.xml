@@ -13,6 +13,8 @@
         android:textSize="32sp"
         android:textStyle="bold"
         android:textColor="@color/white"
+        android:maxLength="20"
+        android:ellipsize="end"
         android:text="Title"
         />
 

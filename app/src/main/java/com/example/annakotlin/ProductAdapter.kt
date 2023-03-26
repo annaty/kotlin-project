@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
@@ -23,10 +24,10 @@ class ProductAdapter(val products: ArrayList<Product>): RecyclerView.Adapter<Pro
         val product = products.get(position)
         holder.textViewName.text = product.name
         holder.textViewDescription.text = product.description
-
         Picasso.get().load(product.picture_url).into(holder.imageViewProduct)
-        holder.textViewName.setOnClickListener(View.OnClickListener {
-            val intent = Intent(it.getContext(), ProductActivity::class.java)
+
+        holder.productCell.setOnClickListener(View.OnClickListener {
+            val intent = Intent(it.getContext(), ProductDetailsActivity::class.java)
             intent.putExtra("name", product.name)
             intent.putExtra("description", product.description)
             intent.putExtra("picture_url", product.picture_url)
@@ -40,6 +41,7 @@ class ProductAdapter(val products: ArrayList<Product>): RecyclerView.Adapter<Pro
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        val productCell = view.findViewById<LinearLayout>(R.id.productCell)
         val textViewName = view.findViewById<TextView>(R.id.textViewName)
         val textViewDescription = view.findViewById<TextView>(R.id.textViewDescription)
         val imageViewProduct = view.findViewById<ImageView>(R.id.imageViewProduct)
